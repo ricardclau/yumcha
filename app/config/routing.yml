@@ -1,0 +1,5 @@
+yumcha_website:
+    resource: "@YumchaWebsiteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
