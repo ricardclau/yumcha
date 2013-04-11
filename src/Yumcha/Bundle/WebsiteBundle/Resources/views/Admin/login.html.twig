@@ -1,0 +1,26 @@
+{% extends 'YumchaWebsiteBundle::adminlayout.html.twig' %}
+
+{% block menu '' %}
+
+    {% block page %}
+        <h1>Yumcha.es Àrea Administració</h1>
+
+        {% if error %}
+            <div class="alert alert-block alert-error fade in">
+                <a class="close" data-dismiss="alert" href="#">&times;</a>
+                <h4 class="alert-heading">Oh snap! You got an error!</h4>
+                <p>{{ error.message | trans }}. Please, try it again!</p>
+            </div>
+        {% endif %}
+
+        <form class="well" action="{{ path('login_check') }}" method="post">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="_username" value="{{ last_username }}"/>
+
+            <label for="password">Password</label>
+            <input id="password" type="password" name="_password" />
+            <p>
+                <button type="submit" class="btn btn-success">Login</button>
+            </p>
+        </form>
+    {% endblock %}

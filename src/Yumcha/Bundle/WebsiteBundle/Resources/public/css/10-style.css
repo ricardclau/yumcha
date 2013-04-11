@@ -1,0 +1,68 @@
+header, section, footer {
+    font-family: Century Gothic, Futura, sans-serif;
+}
+
+#container {
+    margin: 0 auto;
+    width: 990px;
+}
+
+header {
+    margin: 20px 0 0;
+}
+
+footer {
+    height: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgb(239,0,79);
+    color: #ffffff;
+}
+
+footer .content {
+    width: 990px;
+    margin: 8px auto 0;
+    font-size: 12px;
+}
+
+#social {
+    float: left;
+}
+
+#contact {
+    float: right;
+    text-align: right;
+}
+
+section {
+    width: 990px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+}
+
+ul.sections li {
+    float: left;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul.sections li p {
+    margin: 0px;
+}
+
+#logo {
+    float: right;
+}
+

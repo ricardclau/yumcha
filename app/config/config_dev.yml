@@ -8,6 +8,8 @@ framework:
 web_profiler:
     toolbar: true
     intercept_redirects: false
+#    To ensure that footer tight to bottom is shown
+    position: top
 
 monolog:
     handlers:

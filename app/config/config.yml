@@ -29,7 +29,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [ ]
+#    bundles:        [ ]
     #java: /usr/bin/java
 #    filters:
 #        cssrewrite: ~
@@ -79,6 +79,7 @@ twig:
     globals:
         locales: %locales%
         ga_tracking: %ga_tracking%
+        ga_website: %ga_website%
 
 stfalcon_tinymce:
     include_jquery: true

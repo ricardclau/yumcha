@@ -1,0 +1,13 @@
+common:
+  secciones:
+    bubbles: Bubbles
+    icecreams: Gelats
+    news: Notícies
+    shop: Tenda
+
+  meta:
+    description: Bubble Tea a Barcelona. També pots prendre amb nosaltres un gelat, pastís, un cafè o xocolata
+    keywords: Bubble Tea, Barcelona, gelats, batuts, pastissos, xocolata
+
+  footer:
+    contactus: CONTACTE

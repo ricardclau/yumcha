@@ -1,0 +1,13 @@
+common:
+  secciones:
+    bubbles: Bubbles
+    icecreams: Ice Creams
+    news: News
+    shop: Shop
+
+  meta:
+    description: Bubble Tea in Barcelona. You can also enjoy ice creams, cakes, coffee or chocolate with us
+    keywords: Bubble Tea, Barcelona, ice creams, shakes, cakes, chocolate
+
+  footer:
+    contactus: CONTACT US

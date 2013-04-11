@@ -1,0 +1,88 @@
+{% spaceless %}
+    <!DOCTYPE html>
+    <html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta content="index,follow" name="robots">
+        <meta content="{% block description %}{{ 'common.meta.description' | trans }}{% endblock %}" name="description">
+        <meta content="{% block keywords %}{{ 'common.meta.keywords' | trans }}{% endblock %}" name="keywords">
+        <meta content="7 days" name="revisit-after">
+        <title>Yumcha.es{% block title %}{% endblock %}</title>
+        {% stylesheets output='css/compressed.css'
+        '@YumchaWebsiteBundle/Resources/public/css/01-normalize.css'
+        '@YumchaWebsiteBundle/Resources/public/css/10-style.css'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
+        {% endstylesheets %}
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    </head>
+    <body>
+    <div id="container">
+        <header>
+            <nav id="langs">
+                <ul>
+                    {#{% if app.request.locale != 'es' %}<li><a href="{{ path('homepage', {'_locale' : 'es'}) }}">Castellano</a></li>{% endif %}#}
+                    {#{% if app.request.locale != 'ca' %}<li><a href="{{ path('homepage', {'_locale' : 'ca'}) }}">Català</a></li>{% endif %}#}
+                    {#{% if app.request.locale != 'en' %}<li><a href="{{ path('homepage', {'_locale' : 'en'}) }}">English</a></li>{% endif %}#}
+                </ul>
+            </nav>
+            <div id="logo">
+                <img src="/img/yumcha.jpg" alt="{{ 'common.meta.description' | trans }}"/>
+            </div>
+            <nav id="menu">
+                <ul class="sections clearfix">
+                    <li>
+                        <a href="{{ path('bubbles') }}"><img src="/img/boto_marro.png" alt="{{ 'common.secciones.bubbles' | trans }}" /></a>
+                        <p>
+                            <a href="{{ path('bubbles') }}">{{ 'common.secciones.bubbles' | trans }}</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="{{ path('icecreams') }}"><img src="/img/boto_magenta.png" alt="{{ 'common.secciones.icecreams' | trans }}" /></a>
+                        <p>
+                            <a href="{{ path('icecreams') }}">{{ 'common.secciones.icecreams' | trans }}</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="{{ path('shop') }}"><img src="/img/boto_taronja.png" alt="{{ 'common.secciones.shop' | trans }}" /></a>
+                        <p>
+                            <a href="{{ path('shop') }}">{{ 'common.secciones.shop' | trans }}</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="{{ path('news') }}"><img src="/img/boto_lila.png" alt="{{ 'common.secciones.news' | trans }}" /></a>
+                        <p>
+                            <a href="{{ path('news') }}">{{ 'common.secciones.news' | trans }}</a>
+                        </p>
+                    </li>
+                </ul>
+                {% block subsections %}
+                {% endblock %}
+            </nav>
+        </header>
+        {% block content %}{% endblock %}
+        <footer>
+            <div class="content">
+                <div id="social">FB TW</div>
+                <div id="contact">yumcha {{ 'now' | date('Y') }} - {{ 'common.footer.contactus' | trans }}</div>
+            </div>
+        </footer>
+    </div>
+    {#{% javascripts output='js/compressed.js'#}
+    {#'@YumchaWebsiteBundle/Resources/public/js/jquery.js'#}
+    {#'@YumchaWebsiteBundle/Resources/public/js/functions.js'#}
+    {#%}#}
+    {#<script type="text/javascript" src="{{ asset_url }}"></script>#}
+    {#{% endjavascripts %}#}
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '{{ ga_tracking }}', '{{ ga_website }}');
+ga('send', 'pageview');
+    </script>
+    </body>
+    </html>
+{% endspaceless %}
