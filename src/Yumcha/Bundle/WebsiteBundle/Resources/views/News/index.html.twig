@@ -1,0 +1,9 @@
+{% extends 'YumchaWebsiteBundle::layout.html.twig' %}
+
+{% block content %}
+    {% for entry in news.entries | slice(0, 15) %}
+        <article>
+            <h3>{{ entry.title | raw }}</h3>
+        </article>
+    {% endfor %}
+{% endblock %}

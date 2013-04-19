@@ -25,6 +25,7 @@
         "doctrine/migrations": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
+        "kriswallsmith/buzz": "0.*",
         "liip/imagine-bundle": "0.9.*",
         "jordillonch/crud-generator": "@dev",
         "pagerfanta/pagerfanta": "1.0.*@dev",
