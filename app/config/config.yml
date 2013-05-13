@@ -82,7 +82,7 @@ twig:
         ga_website: %ga_website%
 
 stfalcon_tinymce:
-    include_jquery: true
+#    include_jquery: true
     textarea_class: "tinymce"
     theme:
         simple:

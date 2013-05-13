@@ -12,9 +12,24 @@ class TextType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('textCa')
-            ->add('textEs')
-            ->add('textEn')
+            ->add('textCa', 'textarea', array(
+                'attr' => array(
+                    'class' => 'tinymce',
+                    'data-theme' => 'simple' // simple, advanced, bbcode
+                )
+            ))
+            ->add('textEs', 'textarea', array(
+                'attr' => array(
+                    'class' => 'tinymce',
+                    'data-theme' => 'simple' // simple, advanced, bbcode
+                )
+            ))
+            ->add('textEn', 'textarea', array(
+                'attr' => array(
+                    'class' => 'tinymce',
+                    'data-theme' => 'simple' // simple, advanced, bbcode
+                )
+            ))
         ;
     }
 
