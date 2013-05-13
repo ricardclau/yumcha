@@ -1,4 +1,4 @@
-header, section, footer {
+header, section, footer, aside {
     font-family: Century Gothic, Futura, sans-serif;
 }
 
@@ -8,11 +8,12 @@ header, section, footer {
 }
 
 header {
-    margin: 20px 0 0;
+    margin: 20px 0;
 }
 
 footer {
     height: 40px;
+    margin-top: -40px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -38,6 +39,7 @@ footer .content {
 
 section {
     width: 990px;
+    padding-bottom: 40px;
 }
 
 .clearfix {
@@ -66,3 +68,41 @@ ul.sections li p {
     float: right;
 }
 
+#shop {
+    width: 730px;
+    float:left;
+}
+
+#shop_left {
+    float: left;
+}
+
+#shop_right {
+    float: left;
+    width: 200px;
+    margin-left: 20px;
+}
+
+#shop_sidebar {
+    width: 260px;
+    float:right;
+}
+
+#shop_text {
+    clear: both;
+    padding: 20px 0;
+}
+
+#shop_sidebar h3 {
+    text-transform: uppercase;
+    color: rgb(149,216,48);
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0px;
+}
+
+#chinese_yumcha {
+    font-size: 96px;
+    margin: 0px;
+    text-align: center;
+}

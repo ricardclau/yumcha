@@ -1,7 +1,25 @@
 {% extends 'YumchaWebsiteBundle::layout.html.twig' %}
 
 {% block content %}
-    <section class="shop">
-    Tenda!
+    <section id="shop">
+        <div id="shop_left">
+            <img src="/img/shop-big.jpg" alt=""/>
+        </div>
+        <div id="shop_right">
+            <img src="/img/shop-small.jpg" alt=""/>
+            <br><br><br><br>
+            {{ attribute(texts['yumchashop_lateral'], 'text' ~ app.request.locale)}}
+        </div>
+        <div id="shop_text">
+            {{ attribute(texts['yumchashop_text'], 'text' ~ app.request.locale) }}
+        </div>
     </section>
+    <aside id="shop_sidebar">
+        <h3>{{ attribute(texts['quesignificayumcha_titol'], 'text' ~ app.request.locale)}}</h3>
+        <p id="chinese_yumcha">飲茶</p>
+        {{ attribute(texts['quesignificayumcha_text'], 'text' ~ app.request.locale)}}
+        <br><br>
+        <h3>{{ attribute(texts['volstreballambnosaltres_titol'], 'text' ~ app.request.locale)}}</h3>
+        {{ attribute(texts['volstreballambnosaltres_text'], 'text' ~ app.request.locale)}}
+    </aside>
 {% endblock %}

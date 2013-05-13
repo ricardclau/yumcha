@@ -62,13 +62,13 @@
             </nav>
         </header>
         {% block content %}{% endblock %}
-        <footer>
-            <div class="content">
-                <div id="social">FB TW</div>
-                <div id="contact">yumcha {{ 'now' | date('Y') }} - {{ 'common.footer.contactus' | trans }}</div>
-            </div>
-        </footer>
     </div>
+    <footer>
+        <div class="content">
+            <div id="social">FB TW</div>
+            <div id="contact">yumcha {{ 'now' | date('Y') }} - {{ 'common.footer.contactus' | trans }}</div>
+        </div>
+    </footer>
     {#{% javascripts output='js/compressed.js'#}
     {#'@YumchaWebsiteBundle/Resources/public/js/jquery.js'#}
     {#'@YumchaWebsiteBundle/Resources/public/js/functions.js'#}

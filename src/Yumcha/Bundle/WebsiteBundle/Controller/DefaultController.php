@@ -14,7 +14,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        return [];
     }
 
     /**
@@ -24,7 +24,20 @@ class DefaultController extends Controller
      */
     public function shopAction()
     {
-        return [];
+        $texts = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:Text')
+            ->getMultipleNames([
+                'quesignificayumcha_titol',
+                'quesignificayumcha_text',
+                'volstreballambnosaltres_titol',
+                'volstreballambnosaltres_text',
+                'yumchashop_lateral',
+                'yumchashop_text'
+            ]);
+
+        return [
+            'texts' => $texts,
+        ];
     }
 
     /**
