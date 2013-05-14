@@ -216,8 +216,8 @@ class AdminTextController extends Controller
     /**
      * Edits an existing Text entity.
      *
-     * @Route("/{id}", name="admin_text_update")
-     * @Method("PUT")
+     * @Route("/{id}/update", name="admin_text_update")
+     * @Method("POST")
      * @Template("YumchaWebsiteBundle:Text:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
@@ -254,7 +254,7 @@ class AdminTextController extends Controller
     /**
      * Deletes a Text entity.
      *
-     * @Route("/{id}", name="admin_text_delete")
+     * @Route("/{id}/delete", name="admin_text_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
