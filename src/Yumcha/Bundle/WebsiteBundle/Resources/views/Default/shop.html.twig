@@ -15,11 +15,11 @@
         </div>
     </section>
     <aside id="shop_sidebar">
-        <h3>{{ attribute(texts['quesignificayumcha_titol'], 'text' ~ app.request.locale) | raw | striptags }}</h3>
+        <h3>{{ attribute(texts['quesignificayumcha_titol'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
         <p id="chinese_yumcha">飲茶</p>
         {{ attribute(texts['quesignificayumcha_text'], 'text' ~ app.request.locale) | raw}}
         <br><br>
-        <h3>{{ attribute(texts['volstreballambnosaltres_titol'], 'text' ~ app.request.locale | raw | striptags )}}</h3>
+        <h3>{{ attribute(texts['volstreballambnosaltres_titol'], 'text' ~ app.request.locale | striptags | raw )}}</h3>
         {{ attribute(texts['volstreballambnosaltres_text'], 'text' ~ app.request.locale | raw)}}
     </aside>
 {% endblock %}
