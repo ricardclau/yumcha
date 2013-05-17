@@ -39,8 +39,15 @@ footer .content {
 }
 
 section {
-    width: 990px;
+    width: 730px;
     padding-bottom: 48px;
+    float: left;
+}
+
+aside {
+    width: 260px;
+    padding-bottom: 48px;
+    float: right;
 }
 
 .clearfix {
@@ -70,7 +77,6 @@ ul.sections li p {
 }
 
 #shop {
-    width: 730px;
     float:left;
 }
 
@@ -82,11 +88,6 @@ ul.sections li p {
     float: left;
     width: 200px;
     margin-left: 20px;
-}
-
-#shop_sidebar {
-    width: 260px;
-    float:right;
 }
 
 #shop_text {
