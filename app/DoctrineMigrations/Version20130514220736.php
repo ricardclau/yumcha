@@ -27,7 +27,7 @@ class Version20130514220736 extends AbstractMigration
         ");
         $this->addSql("
             INSERT INTO icecream_flavours (category_id, name, title_ca, title_en, title_es) VALUES
-              (1, 'avellanes', 'avellanes', 'hazelnut' 'avellanas'),
+              (1, 'avellanes', 'avellanes', 'hazelnut', 'avellanas'),
               (1, 'cafè', 'cafè' ,'coffee', 'café'),
               (1, 'llet merengada', 'llet merengada' ,'meringued milk', 'leche merengada'),
               (1, 'xocolata', 'xocolata' ,'chocolate', 'chocolate'),
@@ -46,7 +46,7 @@ class Version20130514220736 extends AbstractMigration
               (2, 'mandarina', 'mandarina' ,'mandarine', 'mandarina'),
               (2, 'llimona', 'llimona' ,'lemon', 'limón'),
               (2, 'gingebre', 'gingebre' ,'ginger', 'jengibre'),
-              (2, 'te matcha', 'te matcha' ,'matcha tea', 'té matcha'),
+              (2, 'te matcha 2', 'te matcha' ,'matcha tea', 'té matcha'),
               (2, 'maracujà', 'maracujà' ,'maracuja', 'maracuyà'),
 
               (3, 'bombolles xoco', 'bombolles xoco' ,'choc bubbles', 'burbujas choco'),
