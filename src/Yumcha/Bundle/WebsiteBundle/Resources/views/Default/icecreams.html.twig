@@ -2,9 +2,28 @@
 
 {% block content %}
     <section id="icecreams">
+        <h3>{{ attribute(texts['gelats_especialitats'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
+        {% for special in specials %}
+        <article class="special_icecream">
+            <img width="220" src="/uploads/special_icecreams/{{ special.photo }}" alt="{{ attribute(special, 'text' ~ app.request.locale) }}">
+            <p>{{ attribute(special, 'title' ~ app.request.locale) }}</p>
+        </article>
+        {% endfor %}
 
+        {% for cat in cats %}
+            <article class="cat_icecream">
+                <h2>0{{ cat.id }}</h2>
+                <h4>{{ attribute(cat, 'title' ~ app.request.locale) }}</h4>
+                {% for flavor in cat.flavours %}
+                    <p>{{ attribute(flavor, 'title' ~ app.request.locale) }}</p>
+                {% endfor %}
+            </article>
+        {% endfor %}
     </section>
     <aside id="icecreams_sidebar">
-
+        <h3>{{ attribute(texts['per_diabetics'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
+        {{ attribute(texts['per_diabetics_text'], 'text' ~ app.request.locale) | raw }}
+        <h3>{{ attribute(texts['restauracio'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
+        {{ attribute(texts['restauracio_text'], 'text' ~ app.request.locale) | raw }}
     </aside>
 {% endblock %}

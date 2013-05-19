@@ -1,19 +1,11 @@
 <?php
 
-namespace SEstruch\WebsiteBundle\Entity;
+namespace Yumcha\Bundle\WebsiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 trait EntityFilesTrait
 {
-    /**
-     * @var string $file1
-     *
-     * @Assert\Image()
-     */
-    private $file1;
-
     /**
      * @var array
      */
@@ -94,29 +86,9 @@ trait EntityFilesTrait
         }
     }
 
-    public function setFile1($file1)
-    {
-        $this->file1 = $file1;
-
-        return $this;
-    }
-
-    public function getFile1()
-    {
-        return $this->file1;
-    }
-
-    /**
-     * @Assert\True(message="Foto1 needs to be uploaded")
-     */
-    public function isPhoto1Uploaded()
-    {
-        return !empty($this->file1);
-    }
-
     private function getUploadPath()
     {
-        return __DIR__ . '/../../../../web/uploads/';
+        return __DIR__ . '/../../../../../web/uploads/';
     }
 
     /**

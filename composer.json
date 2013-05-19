@@ -27,7 +27,7 @@
         "doctrine/data-fixtures": "dev-master",
         "kriswallsmith/buzz": "0.*",
         "liip/imagine-bundle": "0.9.*",
-        "jordillonch/crud-generator": "@dev",
+        "jordillonch/crud-generator": "dev-master#d73b3c7aced44b19f663132dfdfb464451e2f9a7",
         "pagerfanta/pagerfanta": "1.0.*@dev",
         "stfalcon/tinymce-bundle": "0.3.*@dev"
     },

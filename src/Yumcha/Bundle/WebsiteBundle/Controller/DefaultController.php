@@ -47,7 +47,29 @@ class DefaultController extends Controller
      */
     public function icecreamsAction()
     {
-        return [];
+        $texts = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:Text')
+            ->getMultipleNames([
+                    'gelats_especialitats',
+                    'per_diabetics',
+                    'restauracio',
+                    'per_diabetics_text',
+                    'restauracio_text',
+                ]);
+
+        $specials = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:SpecialIcecream')
+            ->findAll();
+
+        $flavorCats = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:IcecreamCategory')
+            ->findAll();
+
+        return [
+            'texts' => $texts,
+            'specials' => $specials,
+            'cats' => $flavorCats,
+        ];
     }
 
     /**

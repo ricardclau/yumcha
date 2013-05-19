@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6cfee3d0d33c4695c7b90e4ce28c820f",
+    "hash": "f0d61e21cbf03b34f872f3802f845d23",
     "packages": [
         {
             "name": "doctrine/common",
@@ -131,16 +131,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.3.3",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "2.3.3"
+                "reference": "2.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2.3.3",
-                "reference": "2.3.3",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2.3.4",
+                "reference": "2.3.4",
                 "shasum": ""
             },
             "require": {
@@ -190,7 +190,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-03-24 19:16:29"
+            "time": "2013-05-11 07:45:37"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -269,19 +269,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "275540d96599baec19fa3292c4d06c5cd4eefd06"
+                "reference": "5696cd636df7cbfaf4d1c45ed2922438968cf890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/275540d96599baec19fa3292c4d06c5cd4eefd06",
-                "reference": "275540d96599baec19fa3292c4d06c5cd4eefd06",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/5696cd636df7cbfaf4d1c45ed2922438968cf890",
+                "reference": "5696cd636df7cbfaf4d1c45ed2922438968cf890",
                 "shasum": ""
             },
             "require": {
                 "doctrine/data-fixtures": "*",
                 "doctrine/doctrine-bundle": ">=1.0,<2.0",
                 "php": ">=5.3.2",
-                "symfony/doctrine-bridge": ">=2.1.0,<2.3-dev"
+                "symfony/doctrine-bridge": ">=2.1.0,<2.4-dev"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -318,7 +318,7 @@
                 "Fixture",
                 "persistence"
             ],
-            "time": "2013-02-12 11:13:27"
+            "time": "2013-04-27 11:57:35"
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
@@ -327,19 +327,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
-                "reference": "99c0192804134a8c1d0588777bd98bdbc2dbb554"
+                "reference": "6891b8595a003afce8040dd794e6e9f379bbfafc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/99c0192804134a8c1d0588777bd98bdbc2dbb554",
-                "reference": "99c0192804134a8c1d0588777bd98bdbc2dbb554",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/6891b8595a003afce8040dd794e6e9f379bbfafc",
+                "reference": "6891b8595a003afce8040dd794e6e9f379bbfafc",
                 "shasum": ""
             },
             "require": {
                 "doctrine/doctrine-bundle": ">=1.0,<2.0",
                 "doctrine/migrations": "*",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
+                "symfony/framework-bundle": ">=2.1.0,<2.4-dev"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -372,7 +372,7 @@
                 "migrations",
                 "schema"
             ],
-            "time": "2013-01-12 20:06:22"
+            "time": "2013-04-27 11:57:31"
         },
         {
             "name": "doctrine/migrations",
@@ -430,16 +430,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.3.3",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "2.3.3"
+                "reference": "2.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2.3.3",
-                "reference": "2.3.3",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2.3.4",
+                "reference": "2.3.4",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +496,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-03-24 20:43:58"
+            "time": "2013-05-11 07:51:12"
         },
         {
             "name": "imagine/imagine",
@@ -547,20 +547,23 @@
         },
         {
             "name": "jdorn/sql-formatter",
-            "version": "v1.2.0",
+            "version": "v1.2.9",
             "source": {
                 "type": "git",
-                "url": "git://github.com/jdorn/sql-formatter.git",
-                "reference": "v1.2.0"
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "v1.2.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jdorn/sql-formatter/archive/v1.2.0.zip",
-                "reference": "v1.2.0",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/v1.2.9",
+                "reference": "v1.2.9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "extra": {
@@ -575,7 +578,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
@@ -590,7 +593,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2012-12-22 21:46:50"
+            "time": "2013-04-26 18:42:52"
         },
         {
             "name": "jms/aop-bundle",
@@ -974,12 +977,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSTranslationBundle.git",
-                "reference": "9d844494a0ad5a93cb7f81f4bd1a1d46950690ef"
+                "reference": "91c96119ba7727c5c3b429ed4c2728d60e5e2346"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSTranslationBundle/zipball/9d844494a0ad5a93cb7f81f4bd1a1d46950690ef",
-                "reference": "9d844494a0ad5a93cb7f81f4bd1a1d46950690ef",
+                "url": "https://api.github.com/repos/schmittjoh/JMSTranslationBundle/zipball/91c96119ba7727c5c3b429ed4c2728d60e5e2346",
+                "reference": "91c96119ba7727c5c3b429ed4c2728d60e5e2346",
                 "shasum": ""
             },
             "require": {
@@ -1039,7 +1042,7 @@
                 "ui",
                 "webinterface"
             ],
-            "time": "2013-04-12 07:13:08"
+            "time": "2013-05-14 05:31:00"
         },
         {
             "name": "jordillonch/crud-generator",
@@ -1048,12 +1051,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jordillonch/CrudGeneratorBundle.git",
-                "reference": "92516ad448064c153760c817f85a2828e63eb831"
+                "reference": "d73b3c7aced44b19f663132dfdfb464451e2f9a7"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jordillonch/CrudGeneratorBundle/zipball/92516ad448064c153760c817f85a2828e63eb831",
-                "reference": "92516ad448064c153760c817f85a2828e63eb831",
+                "reference": "d73b3c7aced44b19f663132dfdfb464451e2f9a7",
                 "shasum": ""
             },
             "require": {
@@ -1089,7 +1092,7 @@
                 "crud",
                 "generator"
             ],
-            "time": "2013-04-12 14:24:54"
+            "time": "2013-03-21 10:39:29"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1101,7 +1104,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/0a55a9ba70bd9250899ad77deceaf8cb9e145371",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/fe0fa3d77b7dbbcc5b54a736216ee04f3ffd72be",
                 "reference": "0a55a9ba70bd9250899ad77deceaf8cb9e145371",
                 "shasum": ""
             },
@@ -1117,9 +1120,9 @@
                 "leafo/scssphp": "*",
                 "leafo/scssphp-compass": "*",
                 "mrclay/minify": "*",
-                "phpunit/phpunit": "3.7.*",
+                "phpunit/phpunit": ">=3.7,<4.0",
                 "ptachoire/cssembed": "*",
-                "twig/twig": ">=1.6.0,<2.0"
+                "twig/twig": ">=1.6,<2.0"
             },
             "suggest": {
                 "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
@@ -1317,16 +1320,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.4.1",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1.4.1"
+                "reference": "1.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.4.1",
-                "reference": "1.4.1",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.5.0",
+                "reference": "1.5.0",
                 "shasum": ""
             },
             "require": {
@@ -1375,7 +1378,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-04-01 10:04:58"
+            "time": "2013-04-23 10:09:48"
         },
         {
             "name": "nikic/php-parser",
@@ -1422,12 +1425,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/Pagerfanta.git",
-                "reference": "48ed04c9797e96c70cfc514d0dc0ded8546f2b55"
+                "reference": "5777effa6fc09eacc3f2c92b74234f3e24ffc3aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/48ed04c9797e96c70cfc514d0dc0ded8546f2b55",
-                "reference": "48ed04c9797e96c70cfc514d0dc0ded8546f2b55",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/5777effa6fc09eacc3f2c92b74234f3e24ffc3aa",
+                "reference": "5777effa6fc09eacc3f2c92b74234f3e24ffc3aa",
                 "shasum": ""
             },
             "require": {
@@ -1476,7 +1479,7 @@
                 "paginator",
                 "paging"
             ],
-            "time": "2013-04-16 21:43:21"
+            "time": "2013-05-14 11:06:54"
         },
         {
             "name": "phpoption/phpoption",
@@ -2137,16 +2140,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.12.3",
+            "version": "v1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "v1.12.3"
+                "reference": "v1.13.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.12.3",
-                "reference": "v1.12.3",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.13.0",
+                "reference": "v1.13.0",
                 "shasum": ""
             },
             "require": {
@@ -2155,7 +2158,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -2182,7 +2185,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-04-08 12:40:11"
+            "time": "2013-05-10 15:12:43"
         }
     ],
     "packages-dev": [

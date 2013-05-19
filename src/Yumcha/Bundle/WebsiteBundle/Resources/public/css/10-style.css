@@ -41,13 +41,13 @@ footer .content {
 
 section {
     width: 730px;
-    padding-bottom: 48px;
+    padding-bottom: 88px;
     float: left;
 }
 
 aside {
     width: 260px;
-    padding-bottom: 48px;
+    padding-bottom: 88px;
     float: right;
 }
 
@@ -116,13 +116,58 @@ ul.sections li p {
     padding: 20px 0;
 }
 
-#shop_sidebar h3 {
+#shop_sidebar h3, #icecreams_sidebar h3 {
     text-transform: uppercase;
     color: rgb(149,216,48);
     font-weight: normal;
     font-size: 30px;
     margin: 0px;
 }
+
+#icecreams h3 {
+    text-transform: uppercase;
+    color: #535353;
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0px;
+}
+
+article.special_icecream {
+    float: left;
+    padding-right: 20px;
+}
+
+article.special_icecream p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+}
+
+article.cat_icecream {
+    float: left;
+    padding-right: 20px;
+    width: 200px;
+}
+
+article.cat_icecream h2 {
+    font-size: 48px;
+    margin: 10px 0 0;
+    color: rgb(105, 57, 13);
+}
+
+article.cat_icecream h4 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    color: rgb(105, 57, 13);
+}
+
+article.cat_icecream p {
+    margin: 0 0 5px;
+    text-transform: capitalize;
+}
+
 
 #chinese_yumcha {
     font-size: 96px;
