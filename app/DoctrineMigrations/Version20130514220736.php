@@ -35,7 +35,7 @@ class Version20130514220736 extends AbstractMigration
               (1, 'crema catalana', 'crema catalana' ,'catalan cream', 'crema catalana'),
               (1, 'plàtan', 'plàtan' ,'banana', 'plátano'),
               (1, 'taro', 'taro (o ube)' ,'taro (or ube)', 'taro (o ube)'),
-              (2, 'te matcha', 'te matcha' ,'matcha tea', 'té matcha'),
+              (1, 'te matcha', 'te matcha' ,'matcha tea', 'té matcha'),
               (1, 'maduixa', 'maduixa' ,'strawberry', 'fresa'),
               (1, 'stracciatella', 'stracciatella' ,'stracciatella', 'stracciatella'),
               (1, 'festuc', 'festuc' ,'pistachio', 'pistacho'),
