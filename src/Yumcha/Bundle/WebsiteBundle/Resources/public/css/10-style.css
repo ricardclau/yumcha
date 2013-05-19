@@ -1,5 +1,6 @@
 header, section, footer, aside {
     font-family: Century Gothic, Futura, sans-serif;
+    font-size: 14px;
 }
 
 #container {
@@ -48,6 +49,26 @@ aside {
     width: 260px;
     padding-bottom: 48px;
     float: right;
+}
+
+#news {
+    width: 990px;
+}
+
+#news article {
+    float: left;
+    padding: 10px;
+    width: 200px;
+    height: 280px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.new_img {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
 }
 
 .clearfix {

@@ -9,5 +9,8 @@ common:
     description: Bubble Tea a Barcelona. També pots prendre amb nosaltres un gelat, pastís, un cafè o xocolata
     keywords: Bubble Tea, Barcelona, gelats, batuts, pastissos, xocolata
 
+  news:
+    readmore: Llegir més
+
   footer:
     contactus: CONTACTE

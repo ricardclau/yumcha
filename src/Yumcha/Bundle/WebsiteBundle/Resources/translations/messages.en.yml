@@ -9,5 +9,8 @@ common:
     description: Bubble Tea in Barcelona. You can also enjoy ice creams, cakes, coffee or chocolate with us
     keywords: Bubble Tea, Barcelona, ice creams, shakes, cakes, chocolate
 
+  news:
+    readmore: Read more
+
   footer:
     contactus: CONTACT US

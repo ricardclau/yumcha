@@ -1,9 +1,14 @@
 {% extends 'YumchaWebsiteBundle::layout.html.twig' %}
 
 {% block content %}
-    {% for entry in news.entries | slice(0, 15) %}
+    <section id="news">
+    {% for entry in news | slice(0, 20) %}
         <article>
-            <h3>{{ entry.title | raw }}</h3>
+            <div class="new_img">
+                <a href="{{ entry.link }}" title="{{ entry.title | raw }}" target="_blank"><img src="{{ entry.img }}" alt="{{ entry.title | raw }}"></a>
+            </div>
+            {{ entry.title | raw }} <a href="{{ entry.link }}" title="{{ entry.title | raw }}" target="_blank">{{ 'common.news.readmore' | trans }}</a>
         </article>
     {% endfor %}
+    </section>
 {% endblock %}

@@ -9,5 +9,8 @@ common:
     description: Bubble Tea en Barcelona. También puedes tomarte con nosotros un helado, un pastel, un café o chocolate
     keywords: Bubble Tea, Barcelona, helados, batidos, pasteles, chocolate
 
+  news:
+    readmore: Leer más
+
   footer:
     contactus: CONTACTO
