@@ -12,6 +12,11 @@ header {
     margin: 20px 0;
 }
 
+#langs li {
+    float: right;
+    padding: 0 10px 10px;
+}
+
 footer {
     height: 48px;
     margin-top: -48px;
