@@ -1,6 +1,7 @@
 header, section, footer, aside {
     font-family: Century Gothic, Futura, sans-serif;
     font-size: 14px;
+    color: #6d6d6d;
 }
 
 #container {
@@ -15,6 +16,11 @@ header {
 #langs li {
     float: right;
     padding: 0 10px 10px;
+}
+
+#langs li a {
+    text-decoration: none;
+    color: #6d6d6d;
 }
 
 footer {
@@ -66,7 +72,7 @@ aside {
     width: 200px;
     height: 280px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1px solid #6d6d6d;
 }
 
 .new_img {
@@ -92,10 +98,16 @@ ul.sections li {
     float: left;
     text-transform: uppercase;
     text-align: center;
+    padding-right: 20px;
+}
+
+ul.sections li a {
+    text-decoration: none;
+    color: #6d6d6d;
 }
 
 ul.sections li p {
-    margin: 0px;
+    margin: 5px 0 0;
 }
 
 #logo {
@@ -125,7 +137,7 @@ ul.sections li p {
     text-transform: uppercase;
     color: rgb(149,216,48);
     font-weight: normal;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0px;
 }
 
@@ -133,7 +145,7 @@ ul.sections li p {
     text-transform: uppercase;
     color: #535353;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0px;
 }
 
@@ -172,7 +184,6 @@ article.cat_icecream p {
     margin: 0 0 5px;
     text-transform: capitalize;
 }
-
 
 #chinese_yumcha {
     font-size: 96px;

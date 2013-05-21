@@ -5,11 +5,11 @@
         <h3>{{ attribute(texts['gelats_especialitats'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
         {% for special in specials %}
         <article class="special_icecream">
-            <img width="220" src="/uploads/special_icecreams/{{ special.photo }}" alt="{{ attribute(special, 'text' ~ app.request.locale) }}">
+            <img width="160" src="/uploads/special_icecreams/{{ special.photo }}" alt="{{ attribute(special, 'text' ~ app.request.locale) }}">
             <p>{{ attribute(special, 'title' ~ app.request.locale) }}</p>
         </article>
         {% endfor %}
-
+        <div class="clearfix"></div>
         {% for cat in cats %}
             <article class="cat_icecream">
                 <h2>0{{ cat.id }}</h2>
