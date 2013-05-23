@@ -221,3 +221,20 @@ article.cat_icecream p {
     margin: 0px;
     text-align: center;
 }
+
+#bubbles_intro {
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+#bubbles_intro li {
+    width: 240px;
+    float: left;
+    list-style: none;
+}
+
+#bubbles_intro h3 {
+    color: rgb(105, 57, 13);
+    font-size: 16px;
+    margin: 0px;
+}

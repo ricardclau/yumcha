@@ -2,23 +2,40 @@
 
 {% block content %}
     <section id="bubbles">
+        <img src="/img/abanico.jpg" alt="">
+        <ul id="bubbles_intro" class="clearfix">
+        <li>
+            <h3>{{ attribute(texts['que_es_bubble_tea'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
+            {{ attribute(texts['que_es_bubble_tea_text'], 'text' ~ app.request.locale) | raw }}
+            <img src="/img/queesbubbletea.jpg" alt="">
+        </li>
+        <li>
+            <h3>{{ attribute(texts['bubble_tea_origens'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
+            {{ attribute(texts['bubble_tea_origens_text'], 'text' ~ app.request.locale) | raw }}
+        </li>
+        <li>
+            <h3>{{ attribute(texts['perles_tapioca'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
+            {{ attribute(texts['perles_tapioca_text'], 'text' ~ app.request.locale) | raw }}
+            <img src="/img/tapioca.jpg" alt="">
+        </li>
+        </ul>
         <article>
             <h2>01</h2>
-            <h3>Base</h3>
-            <h4>Te verd</h4>
-            <h4>Te negre</h4>
-            <h4>Cafè</h4>
-            <h4>Matcha</h4>
+            <h3>{{ 'bubbles.base' | trans }}</h3>
+            <h4>{{ 'bubbles.teverd' | trans }}</h4>
+            <h4>{{ 'bubbles.tenegre' | trans }}</h4>
+            <h4>{{ 'bubbles.cafe' | trans }}</h4>
+            <h4>{{ 'bubbles.matcha' | trans }}</h4>
         </article>
         <article>
             <h2>02</h2>
-            <h3>Sabor</h3>
-            <h4>Sense Llet</h4>
-            <h4>Amb Llet</h4>
+            <h3>{{ 'bubbles.sabor' | trans }}</h3>
+            <h4>{{ 'bubbles.sensellet' | trans }}</h4>
+            <h4>{{ 'bubbles.ambllet' | trans }}</h4>
         </article>
         <article>
             <h2>03</h2>
-            <h3>Bubbles</h3>
+            <h3>{{ 'bubbles.bubbles' | trans }}</h3>
             <h4>Tapioca</h4>
             <br>
             <h4>Gelatines</h4>
@@ -34,19 +51,19 @@
         </article>
         <article>
             <h2>04</h2>
-            <h3>Sucre</h3>
-            <p>Sense sucre</p>
-            <p>Dolç</p>
-            <p>Molt Dolç</p>
-            <p>Sacarina</p>
+            <h3>{{ 'bubbles.sucre' | trans }}</h3>
+            <p>{{ 'bubbles.sensesucre' | trans }}</p>
+            <p>{{ 'bubbles.dolç' | trans }}</p>
+            <p>{{ 'bubbles.moltdolç' | trans }}</p>
+            <p>{{ 'bubbles.sacarina' | trans }}</p>
         </article>
         <article>
             <h2>05</h2>
-            <h3>Llet</h3>
-            <h4>Amb Llet</h4>
-            <p>Soja</p>
-            <p>Desnatada</p>
-            <p>Sense llet</p>
+            <h3>{{ 'bubbles.llet' | trans }}</h3>
+            <h4>{{ 'bubbles.ambllet' | trans }}</h4>
+            <p>{{ 'bubbles.soja' | trans }}</p>
+            <p>{{ 'bubbles.desnatada' | trans }}</p>
+            <p>{{ 'bubbles.sensellet' | trans }}</p>
         </article>
     </section>
     <aside id="bubbles_sidebar">

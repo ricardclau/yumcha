@@ -79,6 +79,20 @@ class DefaultController extends Controller
      */
     public function bubblesAction()
     {
-        return [];
+        $texts = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:Text')
+            ->getMultipleNames([
+                    'bubble_especialitats',
+                    'que_es_bubble_tea',
+                    'que_es_bubble_tea_text',
+                    'bubble_tea_origens',
+                    'bubble_tea_origens_text',
+                    'perles_tapioca',
+                    'perles_tapioca_text',
+                ]);
+
+        return [
+            'texts' => $texts,
+        ];
     }
 }

@@ -14,3 +14,22 @@ common:
 
   footer:
     contactus: CONTACT US
+
+bubbles:
+  base: Base
+  sabor: Flavour
+  bubbles: Bubbles
+  sucre: Sugar
+  llet: Milk
+  teverd: Green tea
+  tenegre: Black tea
+  cafe: Coffee
+  matcha: Matcha
+  sensellet: Without milk
+  ambllet: With milk
+  soja: Soy
+  desnatada: Skimmed
+  sensesucre: Without sugar
+  dolç: Sweet
+  moltdolç: Extra sweet
+  sacarina: Sacarine

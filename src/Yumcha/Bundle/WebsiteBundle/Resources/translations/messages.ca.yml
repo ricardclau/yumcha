@@ -14,3 +14,22 @@ common:
 
   footer:
     contactus: CONTACTE
+
+bubbles:
+  base: Base
+  sabor: Sabor
+  bubbles: Bubbles
+  sucre: Sucre
+  llet: Llet
+  teverd: Te verd
+  tenegre: Te negre
+  cafe: Cafè
+  matcha: Matcha
+  sensellet: Sense llet
+  ambllet: Amb llet
+  soja: Soja
+  desnatada: Desnatada
+  sensesucre: Sense sucre
+  dolç: Dolç
+  moltdolç: Molt dolç
+  sacarina: Sacarina
