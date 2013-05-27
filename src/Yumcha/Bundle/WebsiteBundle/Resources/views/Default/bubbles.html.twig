@@ -67,6 +67,12 @@
         </article>
     </section>
     <aside id="bubbles_sidebar">
-
+        <h3>{{ attribute(texts['bubble_especialitats'], 'text' ~ app.request.locale) | striptags | raw }}</h3>
+        {% for special in specials %}
+            <article>
+                <img src="/uploads/special_bubbles/{{ special.photo }}" width="60">
+                {{ attribute(special, 'text' ~ app.request.locale) | raw }}
+            </article>
+        {% endfor %}
     </aside>
 {% endblock %}

@@ -12,12 +12,29 @@
             <div class="container">
                 <a class="brand" href="#">Yumcha.es</a>
                 <ul class="nav">
-                    {% for menuItem in menuItems %}
-                        <li{% if app.request.requesturi == menuItem.link %} class="active"{% endif %}><a href="{{ menuItem.link }}">{{ menuItem.anchor }}</a></li>
-                    {% endfor %}
+                    <li{% if app.request.requesturi == path('admin_text') %} class="active"{% endif %}><a href="{{ path('admin_text') }}">Textos</a></li>
+                    <li class="dropdown" data-dropdown="gelats">
+                        <a href="#" class="dropdown-toggle">Gelats <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('admin_icecreamcategory') }}">Gelats</a></li>
+                            <li><a href="{{ path('admin_specialicecream') }}">Especialitats</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" data-dropdown="bubbles">
+                        <a href="#" class="dropdown-toggle">Bubbles <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            {#<li><a href="{{ path('admin_bubblesflavourcategory') }}">Sabor</a></li>#}
+                            {#<li><a href="{{ path('admin_bubblesbubblecategory') }}">Bubbles</a></li>#}
+                            <li><a href="{{ path('admin_specialbubble') }}">Especialitats</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="filters-right"><a class="btn btn-danger" href="{{ path('admin_logout') }}">Sortir</a></div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('bundles/yumchawebsite/js/bootstrap-dropdown.js') }}"></script>
 {% endblock %}

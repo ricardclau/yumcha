@@ -11,21 +11,21 @@ use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\View\TwitterBootstrapView;
 
-use Yumcha\Bundle\WebsiteBundle\Entity\Text;
-use Yumcha\Bundle\WebsiteBundle\Form\TextType;
-use Yumcha\Bundle\WebsiteBundle\Form\TextFilterType;
+use Yumcha\Bundle\WebsiteBundle\Entity\SpecialBubble;
+use Yumcha\Bundle\WebsiteBundle\Form\SpecialBubbleType;
+use Yumcha\Bundle\WebsiteBundle\Form\SpecialBubbleFilterType;
 
 /**
- * Text controller.
+ * SpecialBubble controller.
  *
- * @Route("/admin/text", options={"i18n" = false})
+ * @Route("/admin/specialbubble", options={"i18n" = false})
  */
-class AdminTextController extends Controller
+class AdminSpecialBubbleController extends Controller
 {
     /**
-     * Lists all Text entities.
+     * Lists all SpecialBubble entities.
      *
-     * @Route("/", name="admin_text")
+     * @Route("/", name="admin_specialbubble")
      * @Method("GET")
      * @Template()
      */
@@ -50,13 +50,13 @@ class AdminTextController extends Controller
     {
         $request = $this->getRequest();
         $session = $request->getSession();
-        $filterForm = $this->createForm(new TextFilterType());
+        $filterForm = $this->createForm(new SpecialBubbleFilterType());
         $em = $this->getDoctrine()->getManager();
-        $queryBuilder = $em->getRepository('YumchaWebsiteBundle:Text')->createQueryBuilder('e');
+        $queryBuilder = $em->getRepository('YumchaWebsiteBundle:SpecialBubble')->createQueryBuilder('e');
 
         // Reset filter
         if ($request->getMethod() == 'POST' && $request->get('filter_action') == 'reset') {
-            $session->remove('TextControllerFilter');
+            $session->remove('SpecialBubbleControllerFilter');
         }
 
         // Filter action
@@ -69,13 +69,13 @@ class AdminTextController extends Controller
                 $this->get('lexik_form_filter.query_builder_updater')->addFilterConditions($filterForm, $queryBuilder);
                 // Save filter to session
                 $filterData = $filterForm->getData();
-                $session->set('TextControllerFilter', $filterData);
+                $session->set('SpecialBubbleControllerFilter', $filterData);
             }
         } else {
             // Get filter from session
-            if ($session->has('TextControllerFilter')) {
-                $filterData = $session->get('TextControllerFilter');
-                $filterForm = $this->createForm(new TextFilterType(), $filterData);
+            if ($session->has('SpecialBubbleControllerFilter')) {
+                $filterData = $session->get('SpecialBubbleControllerFilter');
+                $filterForm = $this->createForm(new SpecialBubbleFilterType(), $filterData);
                 $this->get('lexik_form_filter.query_builder_updater')->addFilterConditions($filterForm, $queryBuilder);
             }
         }
@@ -100,7 +100,7 @@ class AdminTextController extends Controller
         $me = $this;
         $routeGenerator = function($page) use ($me)
         {
-            return $me->generateUrl('admin_text', array('page' => $page));
+            return $me->generateUrl('admin_specialbubble', array('page' => $page));
         };
 
         // Paginator - view
@@ -116,16 +116,16 @@ class AdminTextController extends Controller
     }
 
     /**
-     * Creates a new Text entity.
+     * Creates a new SpecialBubble entity.
      *
-     * @Route("/", name="admin_text_create")
+     * @Route("/", name="admin_specialbubble_create")
      * @Method("POST")
-     * @Template("YumchaWebsiteBundle:AdminText:new.html.twig")
+     * @Template("YumchaWebsiteBundle:AdminSpecialBubble:new.html.twig")
      */
     public function createAction(Request $request)
     {
-        $entity  = new Text();
-        $form = $this->createForm(new TextType(), $entity);
+        $entity  = new SpecialBubble();
+        $form = $this->createForm(new SpecialBubbleType(), $entity);
         $form->bind($request);
 
         if ($form->isValid()) {
@@ -134,7 +134,7 @@ class AdminTextController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add('success', 'flash.create.success');
 
-            return $this->redirect($this->generateUrl('admin_text_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('admin_specialbubble_show', array('id' => $entity->getId())));
         }
 
         return array(
@@ -144,16 +144,16 @@ class AdminTextController extends Controller
     }
 
     /**
-     * Displays a form to create a new Text entity.
+     * Displays a form to create a new SpecialBubble entity.
      *
-     * @Route("/new", name="admin_text_new")
+     * @Route("/new", name="admin_specialbubble_new")
      * @Method("GET")
      * @Template()
      */
     public function newAction()
     {
-        $entity = new Text();
-        $form   = $this->createForm(new TextType(), $entity);
+        $entity = new SpecialBubble();
+        $form   = $this->createForm(new SpecialBubbleType(), $entity);
 
         return array(
             'entity' => $entity,
@@ -162,9 +162,9 @@ class AdminTextController extends Controller
     }
 
     /**
-     * Finds and displays a Text entity.
+     * Finds and displays a SpecialBubble entity.
      *
-     * @Route("/{id}", name="admin_text_show")
+     * @Route("/{id}", name="admin_specialbubble_show")
      * @Method("GET")
      * @Template()
      */
@@ -172,10 +172,10 @@ class AdminTextController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('YumchaWebsiteBundle:Text')->find($id);
+        $entity = $em->getRepository('YumchaWebsiteBundle:SpecialBubble')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Text entity.');
+            throw $this->createNotFoundException('Unable to find SpecialBubble entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -187,9 +187,9 @@ class AdminTextController extends Controller
     }
 
     /**
-     * Displays a form to edit an existing Text entity.
+     * Displays a form to edit an existing SpecialBubble entity.
      *
-     * @Route("/{id}/edit", name="admin_text_edit")
+     * @Route("/{id}/edit", name="admin_specialbubble_edit")
      * @Method("GET")
      * @Template()
      */
@@ -197,13 +197,13 @@ class AdminTextController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('YumchaWebsiteBundle:Text')->find($id);
+        $entity = $em->getRepository('YumchaWebsiteBundle:SpecialBubble')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Text entity.');
+            throw $this->createNotFoundException('Unable to find SpecialBubble entity.');
         }
 
-        $editForm = $this->createForm(new TextType(), $entity);
+        $editForm = $this->createForm(new SpecialBubbleType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
@@ -214,32 +214,33 @@ class AdminTextController extends Controller
     }
 
     /**
-     * Edits an existing Text entity.
+     * Edits an existing SpecialBubble entity.
      *
-     * @Route("/{id}/update", name="admin_text_update")
+     * @Route("/{id}/update", name="admin_specialbubble_update")
      * @Method("POST")
-     * @Template("YumchaWebsiteBundle:AdminText:edit.html.twig")
+     * @Template("YumchaWebsiteBundle:AdminSpecialBubble:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('YumchaWebsiteBundle:Text')->find($id);
+        $entity = $em->getRepository('YumchaWebsiteBundle:SpecialBubble')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Text entity.');
+            throw $this->createNotFoundException('Unable to find SpecialBubble entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createForm(new TextType(), $entity);
+        $editForm = $this->createForm(new SpecialBubbleType(), $entity);
         $editForm->bind($request);
 
         if ($editForm->isValid()) {
+            $entity->prepareFiles();
             $em->persist($entity);
             $em->flush();
             $this->get('session')->getFlashBag()->add('success', 'flash.update.success');
 
-            return $this->redirect($this->generateUrl('admin_text_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('admin_specialbubble_edit', array('id' => $id)));
         } else {
             $this->get('session')->getFlashBag()->add('error', 'flash.update.error');
         }
@@ -252,10 +253,10 @@ class AdminTextController extends Controller
     }
 
     /**
-     * Deletes a Text entity.
+     * Deletes a SpecialBubble entity.
      *
-     * @Route("/{id}/delete", name="admin_text_delete")
-     * @Method("DELETE")
+     * @Route("/{id}/delete", name="admin_specialbubble_delete")
+     * @Method("POST")
      */
     public function deleteAction(Request $request, $id)
     {
@@ -264,10 +265,10 @@ class AdminTextController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('YumchaWebsiteBundle:Text')->find($id);
+            $entity = $em->getRepository('YumchaWebsiteBundle:SpecialBubble')->find($id);
 
             if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Text entity.');
+                throw $this->createNotFoundException('Unable to find SpecialBubble entity.');
             }
 
             $em->remove($entity);
@@ -277,11 +278,11 @@ class AdminTextController extends Controller
             $this->get('session')->getFlashBag()->add('error', 'flash.delete.error');
         }
 
-        return $this->redirect($this->generateUrl('admin_text'));
+        return $this->redirect($this->generateUrl('admin_specialbubble'));
     }
 
     /**
-     * Creates a form to delete a Text entity by id.
+     * Creates a form to delete a SpecialBubble entity by id.
      *
      * @param mixed $id The entity id
      *

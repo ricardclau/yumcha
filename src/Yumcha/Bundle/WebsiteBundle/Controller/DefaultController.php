@@ -91,8 +91,13 @@ class DefaultController extends Controller
                     'perles_tapioca_text',
                 ]);
 
+        $specials = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:SpecialBubble')
+            ->findAll();
+
         return [
             'texts' => $texts,
+            'specials' => $specials,
         ];
     }
 }

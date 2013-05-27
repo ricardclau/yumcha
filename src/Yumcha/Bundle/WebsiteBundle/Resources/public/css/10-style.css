@@ -133,7 +133,7 @@ ul.sections li p {
     padding: 20px 0;
 }
 
-#shop_sidebar h3, #icecreams_sidebar h3 {
+#shop_sidebar h3, #icecreams_sidebar h3, #bubbles_sidebar h3 {
     text-transform: uppercase;
     color: rgb(149,216,48);
     font-weight: normal;
@@ -228,13 +228,25 @@ article.cat_icecream p {
 }
 
 #bubbles_intro li {
-    width: 240px;
+    width: 228px;
     float: left;
     list-style: none;
+    padding-right: 15px;
+    word-wrap: break-word;
 }
 
 #bubbles_intro h3 {
     color: rgb(105, 57, 13);
     font-size: 16px;
     margin: 0px;
+}
+
+#bubbles_sidebar article {
+    margin-bottom: 10px;
+    clear: both;
+}
+
+#bubbles_sidebar article img {
+    float: left;
+    padding: 10px;
 }
