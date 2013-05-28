@@ -6,12 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * IcecreamCategory
+ * BubbleIngredient
  *
- * @ORM\Table("icecream_categories", uniqueConstraints={@ORM\UniqueConstraint(columns={"name"})})
- * @ORM\Entity(repositoryClass="Yumcha\Bundle\WebsiteBundle\Entity\IcecreamCategoryRepository")
+ * @ORM\Table(name="bubble_ingredients", uniqueConstraints={@ORM\UniqueConstraint(columns={"name"})})
+ * @ORM\Entity(repositoryClass="Yumcha\Bundle\WebsiteBundle\Entity\BubbleIngredientRepository")
  */
-class IcecreamCategory
+class BubbleIngredient
 {
     /**
      * @var integer
@@ -55,9 +55,10 @@ class IcecreamCategory
     private $titleEn;
 
     /**
-     * @ORM\OneToMany(targetEntity="IcecreamFlavour", mappedBy="category")
+     * @ORM\ManyToOne(targetEntity="BubbleIngredientCategory", inversedBy="ingredients")
+     * @Assert\NotNull()
      */
-    private $flavours;
+    private $category;
 
     /**
      * Get id
@@ -73,7 +74,7 @@ class IcecreamCategory
      * Set name
      *
      * @param string $name
-     * @return IcecreamCategory
+     * @return BubbleIngredient
      */
     public function setName($name)
     {
@@ -96,7 +97,7 @@ class IcecreamCategory
      * Set titleCa
      *
      * @param string $titleCa
-     * @return IcecreamCategory
+     * @return BubbleIngredient
      */
     public function setTitleCa($titleCa)
     {
@@ -119,7 +120,7 @@ class IcecreamCategory
      * Set titleEs
      *
      * @param string $titleEs
-     * @return IcecreamCategory
+     * @return BubbleIngredient
      */
     public function setTitleEs($titleEs)
     {
@@ -142,7 +143,7 @@ class IcecreamCategory
      * Set titleEn
      *
      * @param string $titleEn
-     * @return IcecreamCategory
+     * @return BubbleIngredient
      */
     public function setTitleEn($titleEn)
     {
@@ -162,40 +163,25 @@ class IcecreamCategory
     }
 
     /**
-     * Add flavour
+     * Set category
      *
-     * @param IcecreamFlavour $flavour
-     * @return IcecreamCategory
+     * @param \Yumcha\Bundle\WebsiteBundle\Entity\BubbleIngredientCategory $category
+     * @return Pintura
      */
-    public function addFlavour(IcecreamFlavour $flavour)
+    public function setCategory(BubbleIngredientCategory $category = null)
     {
-        $this->flavours[] = $flavour;
+        $this->category = $category;
 
         return $this;
     }
 
     /**
-     * Remove flavour
+     * Get category
      *
-     * @param IcecreamFlavour $flavour
+     * @return \Yumcha\Bundle\WebsiteBundle\Entity\BubbleIngredientCategory
      */
-    public function removeFlavour(IcecreamFlavour $flavour)
+    public function getCategory()
     {
-        $this->flavours->removeElement($flavour);
-    }
-
-    /**
-     * Get Flavours
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getFlavours()
-    {
-        return $this->flavours;
-    }
-
-    public function __toString()
-    {
-        return $this->name;
+        return $this->category;
     }
 }

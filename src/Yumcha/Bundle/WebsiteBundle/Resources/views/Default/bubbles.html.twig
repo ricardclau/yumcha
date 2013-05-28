@@ -30,24 +30,24 @@
         <article>
             <h2>02</h2>
             <h3>{{ 'bubbles.sabor' | trans }}</h3>
-            <h4>{{ 'bubbles.sensellet' | trans }}</h4>
-            <h4>{{ 'bubbles.ambllet' | trans }}</h4>
+            {% for sabor in sabors %}
+                <h4>{{ attribute(sabor, 'title' ~ app.request.locale) }}</h4>
+                {% for ing in sabor.ingredients %}
+                    <p>{{ attribute(ing, 'title' ~ app.request.locale) }}</p>
+                {% endfor %}
+                <br>
+            {% endfor %}
         </article>
         <article>
             <h2>03</h2>
             <h3>{{ 'bubbles.bubbles' | trans }}</h3>
-            <h4>Tapioca</h4>
-            <br>
-            <h4>Gelatines</h4>
-            <p>Maduixa</p>
-            <p>Poma verda</p>
-            <br>
-            <h4>Poppings</h4>
-            <p>Litxi</p>
-            <p>Mango</p>
-            <br>
-            <h4>Altres</h4>
-            <p>Aloe Vera</p>
+            {% for bubble in bubbles %}
+                <h4>{{ attribute(bubble, 'title' ~ app.request.locale) }}</h4>
+                {% for ing in bubble.ingredients %}
+                    <p>{{ attribute(ing, 'title' ~ app.request.locale) }}</p>
+                {% endfor %}
+                <br>
+            {% endfor %}
         </article>
         <article>
             <h2>04</h2>

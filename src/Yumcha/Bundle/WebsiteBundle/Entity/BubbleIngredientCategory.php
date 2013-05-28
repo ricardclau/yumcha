@@ -6,12 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * IcecreamCategory
+ * BubbleIngredientCategory
  *
- * @ORM\Table("icecream_categories", uniqueConstraints={@ORM\UniqueConstraint(columns={"name"})})
- * @ORM\Entity(repositoryClass="Yumcha\Bundle\WebsiteBundle\Entity\IcecreamCategoryRepository")
+ * @ORM\Table(name="bubble_ingredients_categories", uniqueConstraints={@ORM\UniqueConstraint(columns={"name"})})
+ * @ORM\Entity(repositoryClass="Yumcha\Bundle\WebsiteBundle\Entity\BubbleIngredientCategoryRepository")
  */
-class IcecreamCategory
+class BubbleIngredientCategory
 {
     /**
      * @var integer
@@ -55,9 +55,16 @@ class IcecreamCategory
     private $titleEn;
 
     /**
-     * @ORM\OneToMany(targetEntity="IcecreamFlavour", mappedBy="category")
+     * @var integer
+     *
+     * @ORM\Column(name="step", type="integer")
      */
-    private $flavours;
+    private $step;
+
+    /**
+     * @ORM\OneToMany(targetEntity="BubbleIngredient", mappedBy="category")
+     */
+    private $ingredients;
 
     /**
      * Get id
@@ -73,7 +80,7 @@ class IcecreamCategory
      * Set name
      *
      * @param string $name
-     * @return IcecreamCategory
+     * @return BubbleIngredientCategory
      */
     public function setName($name)
     {
@@ -96,7 +103,7 @@ class IcecreamCategory
      * Set titleCa
      *
      * @param string $titleCa
-     * @return IcecreamCategory
+     * @return BubbleIngredientCategory
      */
     public function setTitleCa($titleCa)
     {
@@ -119,7 +126,7 @@ class IcecreamCategory
      * Set titleEs
      *
      * @param string $titleEs
-     * @return IcecreamCategory
+     * @return BubbleIngredientCategory
      */
     public function setTitleEs($titleEs)
     {
@@ -142,7 +149,7 @@ class IcecreamCategory
      * Set titleEn
      *
      * @param string $titleEn
-     * @return IcecreamCategory
+     * @return BubbleIngredientCategory
      */
     public function setTitleEn($titleEn)
     {
@@ -162,40 +169,71 @@ class IcecreamCategory
     }
 
     /**
-     * Add flavour
+     * Set step
      *
-     * @param IcecreamFlavour $flavour
-     * @return IcecreamCategory
+     * @param integer $step
+     * @return BubbleIngredientCategory
      */
-    public function addFlavour(IcecreamFlavour $flavour)
+    public function setStep($step)
     {
-        $this->flavours[] = $flavour;
+        $this->step = $step;
+    
+        return $this;
+    }
+
+    /**
+     * Get step
+     *
+     * @return integer 
+     */
+    public function getStep()
+    {
+        return $this->step;
+    }
+
+    /**
+     * Add ingredient
+     *
+     * @param BubbleIngredient $ingredient
+     * @return BubbleIngredientCategory
+     */
+    public function addIngredient(BubbleIngredient $ingredient)
+    {
+        $this->ingredients[] = $ingredient;
 
         return $this;
     }
 
     /**
-     * Remove flavour
+     * Remove ingredient
      *
-     * @param IcecreamFlavour $flavour
+     * @param BubbleIngredient $ingredient
      */
-    public function removeFlavour(IcecreamFlavour $flavour)
+    public function removeIngredient(BubbleIngredient $ingredient)
     {
-        $this->flavours->removeElement($flavour);
+        $this->ingredients->removeElement($ingredient);
     }
 
     /**
-     * Get Flavours
+     * Get ingredients
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getFlavours()
+    public function getIngredients()
     {
-        return $this->flavours;
+        return $this->ingredients;
     }
 
     public function __toString()
     {
         return $this->name;
+    }
+
+    public static function getSteps()
+    {
+        return [
+            2 => 'Sabor',
+            3 => 'Bubbles',
+        ];
     }
 }

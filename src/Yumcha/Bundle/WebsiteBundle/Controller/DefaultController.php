@@ -95,9 +95,19 @@ class DefaultController extends Controller
             ->getRepository('YumchaWebsiteBundle:SpecialBubble')
             ->findAll();
 
+        $sabors = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:BubbleIngredientCategory')
+            ->findBy(['step' => 2]);
+
+        $bubbles = $this->getDoctrine()
+            ->getRepository('YumchaWebsiteBundle:BubbleIngredientCategory')
+            ->findBy(['step' => 3]);
+
         return [
             'texts' => $texts,
             'specials' => $specials,
+            'sabors' => $sabors,
+            'bubbles' => $bubbles,
         ];
     }
 }
