@@ -37,6 +37,7 @@ class Version20130528223614 extends AbstractMigration
             (6,4,'Maduixa_gel','Maduixa','Fresa','Strawberry'),
             (7,4,'Poma verda','Poma verda','Manzana verde','Green Apple'),
             (8,5,'Litxi','Litxi','Lichi','Lichy'),
+            (9,6,'Aloe Vera','Aloe Vera','Aloe Vera','Aloe Vera')
         ");
     }
 
