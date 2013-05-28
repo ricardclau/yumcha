@@ -246,7 +246,11 @@ article.cat_icecream p {
     clear: both;
 }
 
+#bubbles_sidebar article div.text {
+    float: left;
+}
+
 #bubbles_sidebar article img {
     float: left;
-    padding: 10px;
+    padding: 0 10px 10px;
 }

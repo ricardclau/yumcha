@@ -212,15 +212,6 @@ class SpecialIcecream
         return $this->file;
     }
 
-
-    /**
-     * @Assert\True(message="Foto needs to be uploaded")
-     */
-    public function isPhotoUploaded()
-    {
-        return !empty($this->file);
-    }
-
     public function getUploadDir()
     {
         return $this->getUploadPath() . 'special_icecreams/';
