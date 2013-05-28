@@ -71,7 +71,7 @@
         {% for special in specials %}
             <article>
                 <img src="/uploads/special_bubbles/{{ special.photo }}" width="60">
-                <div class="text">{{ attribute(special, 'text' ~ app.request.locale) | raw }}</div>
+                <div>{{ attribute(special, 'text' ~ app.request.locale) | raw }}</div>
             </article>
         {% endfor %}
     </aside>
