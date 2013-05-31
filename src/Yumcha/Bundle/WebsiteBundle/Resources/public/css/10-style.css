@@ -257,6 +257,7 @@ article.cat_icecream p {
 #bubbles_sidebar article {
     display: block;
     margin-bottom: 10px;
+    clear: both;
 }
 
 #bubbles_sidebar article div {
